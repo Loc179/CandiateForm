@@ -1,0 +1,82 @@
+/* Sidebar */
+.container .sidebar {
+    position: relative;
+    width: 233px;
+    min-width: 233px;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(../images/sidebar.svg);
+    padding: 20px 10px 16px 10px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 
+        width 0.15s ease,
+        min-width 0.15s ease;
+}
+
+.sidebar.collapsed {
+    width: 56px;
+    min-width: 56px;
+}
+
+/* Ẩn text khi thu gọn */
+.sidebar.collapsed .sidebar-item-text,
+.sidebar.collapsed .sidebar-text-content {
+    display: none;
+}
+
+/* Canh giữa icon khi thu gọn */
+.sidebar.collapsed .sidebar-item {
+    justify-content: center;
+}
+
+/* Đổi icon */
+.sidebar.collapsed .icon-sb-left {
+    transform: rotate(180deg);
+}
+
+.sidebar .sidebar-container {
+}
+
+.sidebar .sidebar-item {
+    height: 44px;
+    padding: 4px 16px;
+    margin: 8px 0;
+    color: white;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.sidebar-item.active {
+    border-radius: 4px;
+    background-color: #2680eb !important;
+}
+
+.sidebar .sidebar-item:hover {
+    background-color: #797d83;
+    border-radius: 4px;
+}
+
+.sidebar-item-text {
+    align-content: center;
+    margin-left: 16px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.sidebar .bottom-area {
+    position: absolute;
+    width: calc(100% - 20px);
+    bottom: 16px;
+    padding: 8px 16px;
+    border: #fff 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sidebar .bottom-area .sidebar-text-content {
+    align-content: center;
+    margin-left: 16px;
+    font-size: 16px;
+    color: white;
+}

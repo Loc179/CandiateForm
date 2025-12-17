@@ -1,0 +1,236 @@
+<div class="popup-overlay" id="popup-overlay">
+            <div class="popup-header">
+                <div class="popup-title">Chỉnh sửa thông tin ứng viên</div>
+                <button class="close-btn-edit"></button>
+            </div>
+
+            <div class="popup-content">
+                <div class="candidate-info">
+                    <div class="avatar-section">
+                        <div class="avatar-placeholder">Ảnh</div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="form-row">
+                            <label class="label">Họ và tên <span class="required">*</span></label>
+                            <input type="text" class="input-field fullname-edit" id="CandidateNameEdit" placeholder="Nhập họ và tên" maxlength="255">
+                        </div>
+
+                        <div class="form-row-double">
+                            <div class="form-row-double-first">
+                                <div class="date-format">
+                                    <label class="label">Ngày sinh</label>
+                                </div>
+                                <input type="date" class="input-field" id="BirthdayEdit" placeholder="dd/MM/yyyy">
+                            </div>
+                            <div class="form-row-double-second">
+                                <label class="label">Giới tính</label>
+                                <select class="input-field" id="GenderEdit">
+                                    <option value="">Chọn giới tính</option>
+                                    <option value="1">Nam</option>
+                                    <option value="0">Nữ</option>
+                                    <option value="-1">Khác</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row-double">
+                            <div class="form-row-double-first">
+                                <label class="label">Ngày ứng tuyển 
+                                </label>
+                                <input type="date" class="input-field" id="ApplyDateEdit" placeholder="dd/MM/yyyy">
+                            </div>
+                            <div class="form-row-double-second">
+                                <label class="label">Nguồn ứng viên</label>
+                                <select class="input-field" id="ChannelNameEdit">
+                                    <option value="">Chọn nguồn ứng viên</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Vieclam24h">Vieclam24h</option>
+                                    <option value="Careerbuilder">Careerbuilder</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="label">Khu vực</label>
+                            <select class="input-field" id="AreaNameEdit">
+                                <option value="">Chọn giá trị</option>
+                                <option value="Cầu Giấy">Cầu Giấy</option>
+                                <option value="Hồ Tây">Hồ Tây</option>
+                                <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="label">Nhân sự khai thác</label>
+                            <select class="input-field" id="AttractivePersonnelEdit">
+                                <option value="">Chọn nhân sự khai thác ứng viên</option>
+                                <option value="Nguyễn Văn A">Nguyễn Văn A</option>
+                                <option value="Nguyễn Thị B">Nguyễn Thị B</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <label class="label">Cộng tác viên</label>
+                            <select class="input-field" id="CollaboratorNameEdit">
+                                <option value="">Chọn cộng tác viên</option>
+                                <option value="Nguyễn Thị Bích">Nguyễn Thị Bích</option>
+                                <option value="Nguyễn Thị An">Nguyễn Thị An</option>
+                            </select>
+                        </div>
+
+                        <button class="add-button">Thêm người giới thiệu</button>
+                    </div>
+
+                </div>
+
+                <div class="contact-info">
+                    <div class="popup-edit-title-item">THÔNG TIN LIÊN HỆ</div>
+
+                    <div class="contact-info-container">
+                        <div class="contact-info-item">
+                            <div class="info-item-left">
+                                <div class="icon icon-phone"></div>
+                                <div class="info-left-text">Số điện thoại</div>
+                            </div>
+                            <div class="info-item-right">
+                                <input type="text" class="input-field info-right-input mobile-edit" id="MobileEdit">
+                            </div>
+                        </div>
+                        <div class="contact-info-add">
+                            <button class="add-button" style="margin-left: 150px;">Thêm số điện thoại</button>
+                        </div>
+
+                        
+                        <div class="contact-info-item">
+                            <div class="info-item-left">
+                                <div class="icon icon-email"></div>
+                                <div class="info-left-text">Email</div>
+                            </div>
+                            <div class="info-item-right">
+                                <input type="text" class="input-field info-right-input email-edit" id="EmailEdit">
+                            </div>
+                        </div>
+                        <div class="contact-info-add">
+                            <button class="add-button" style="margin-left: 150px;">Thêm email</button>
+                        </div>
+
+
+                        <div class="contact-info-item contact-info-row">
+                            <div class="info-item-left">
+                                <div class="icon icon-location"></div>
+                                <div class="info-left-text">Địa chỉ</div>
+                            </div>
+                            <div class="info-item-right">
+                                <input type="text" class="input-field info-right-input" id="AddressEdit">
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item contact-info-row">
+                            <div class="info-item-left">
+                                <div class="icon icon-skype-trans"></div>
+                                <div class="info-left-text">Skype</div>
+                            </div>
+                            <div class="info-item-right display-flex gap-16">
+                                <input type="text" class="input-field info-right-input" placeholder="Tên hiển thị">
+                                <input type="text" class="input-field info-right-input" placeholder="Live">
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item contact-info-row">
+                            <div class="info-item-left">
+                                <div class="icon icon-facebook-trans"></div>
+                                <div class="info-left-text">Facebook</div>
+                            </div>
+                            <div class="info-item-right">
+                                <input type="text" class="input-field info-right-input">
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item contact-info-row">
+                            <div class="info-item-left">
+                                <div class="icon icon-zalo"></div>
+                                <div class="info-left-text">Zalo</div>
+                            </div>
+                            <div class="info-item-right">
+                                <input type="text" class="input-field info-right-input">
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item pt-16">
+                            <div class="info-item-left">
+                                <div class="icon icon-otherlink-trans"></div>
+                                <div class="info-left-text">Liên kết khác</div>
+                            </div>
+                            <div class="info-item-right">
+                                <input type="text" class="input-field info-right-input">
+                            </div>
+                        </div>
+                        <div class="contact-info-add">
+                            <button class="add-button" style="margin-left: 150px;">Thêm đường dẫn</button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="education-content">
+                    <div class="popup-edit-title-item">HỌC VẤN</div>
+                    
+                    <div class="education-info">
+                        <div class="education-info-row">
+                            <span class="education-info-label">Trình độ đào tạo</span>
+                            <input type="text" class="input-field" id="EducationDegreeNameEdit" placeholder="Nhập trình độ đào tạo">
+                        </div>
+                        <div class="education-info-row">
+                            <span class="education-info-label">Nơi đào tạo</span>
+                            <input type="text" class="input-field" id="EducationPlaceNameEdit" placeholder="Nhập nơi đào tạo">
+                        </div>
+                        <div class="education-info-row">
+                            <span class="education-info-label">Chuyên ngành</span>
+                            <input type="text" class="input-field" id="EducationMajorNameEdit" placeholder="Nhập chuyên ngành">
+                        </div>
+                    </div>
+                    <hr>
+                    <button class="add-button">Thêm học vấn</button>
+                </div>
+
+                <div class="work-experience-edit">
+                    <div class="popup-edit-title-item">KINH NGHIỆM LÀM VIỆC</div>
+                    <div class="work-experience-edit-info">
+                        <div class="experience-info-row">
+                            <span class="experience-info-label">Nơi làm việc gần đây</span>
+                            <input type="text" class="input-field" id="WorkPlaceRecentEdit" placeholder="Nhập nơi làm việc gần đây">
+                        </div>
+                        <hr>
+                        <button class="add-button">Thêm học vấn</button>
+                        <div class="experience-info-row">
+                            <span class="experience-info-label">Nơi làm việc gần đây</span>
+                            <input type="text" class="input-field" id="" placeholder="Nhập nơi làm việc gần đây">
+                        </div>
+                        <div class="experience-info-row">
+                            <span class="experience-info-label">Thời gian</span>
+                            <div class="date-range">
+                                <input type="date" class="input-field" placeholder="MM/yyyy">
+                                <span>-</span>
+                                <input type="date" class="input-field" placeholder="MM/yyyy">
+                            </div>
+                        </div>
+                        <div class="experience-info-row">
+                            <span class="experience-info-label">Vị trí công việc</span>
+                            <input type="text" class="input-field" id="JobPositionName" placeholder="Nhập vị trí công việc">
+                        </div>
+                        <div class="experience-info-row">
+                            <span class="experience-info-label">Mô tả công việc</span>
+                            <textarea class="input-field" placeholder="Nhập mô tả công việc"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="popup-footer">
+                <button class="btn btn-cancel-edit">Hủy</button>
+                <button class="btn btn-primary-edit">Lưu</button>
+            </div>
+        </div>

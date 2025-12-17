@@ -1,0 +1,50 @@
+/* Tạo các class dùng chung trong css */
+.display-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex {
+    flex: 1;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.unactive {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.pt-16 {
+    padding-top: 16px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
