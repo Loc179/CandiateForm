@@ -1,3 +1,5 @@
+import {GenderLabels, RecruitmentStatusLabels, OfferStatusLabels} from '../constants/enums.js';
+
 export function renderTable(candidates, options = {}) {
     const tableBody = document.querySelector('.candidate-table tbody');
     const startEl = document.querySelector('.start');
@@ -44,13 +46,33 @@ export function renderTable(candidates, options = {}) {
       return first + last;
   }
 
+  // Format ngày thàng năm
   function formatDate(date) {
-      const d = new Date(date);
-      const day = String(d.getDate()).padStart(2, '0');
-      const month = String(d.getMonth() + 1).padStart(2, '0');
-      const year = d.getFullYear();
-      return `${day}/${month}/${year}`;
+    if (!date) return '--';
+
+    const d = new Date(date);
+
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const year = d.getFullYear();
+
+    return `${day}/${month}/${year}`;
   }
+
+  // Randum backgroud color avatar
+  function getAvatarColorFromName(name) {
+    if (!name) return '#5598fc';
+
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) {
+      hash = name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+
+    const hue = Math.abs(hash) % 360;
+
+    return `hsl(${hue}, 65%, 55%)`;
+  }
+
 
   const renderCandidateName = (c) => {
     if (!c.IsEmployee) {
@@ -73,7 +95,7 @@ export function renderTable(candidates, options = {}) {
         </td>
         <td>
           <div class="fullname">
-            <div class="avatar">
+            <div class="avatar" style="background-color: ${getAvatarColorFromName(c.CandidateName)}">
                 ${getInitialsFirstLast(c.CandidateName)}
             </div>
             <div>
@@ -88,7 +110,7 @@ export function renderTable(candidates, options = {}) {
         <td>${formatDisplay(c.RecruitmentName)}</td>
         <td>${formatDisplay(c.RecruitmentRoundName)}</td>
         <td>${formatDisplay(c.Score)}</td>
-        <td>${formatDisplay(c.ApplyDate)}</td>
+        <td>${formatDate(c.ApplyDate)}</td>
         <td>${formatDisplay(c.ChannelName)}</td>
         <td>${formatDisplay(c.EducationDegreeName)}</td>
         <td>${formatDisplay(c.EducationPlaceName)}</td>
@@ -103,14 +125,14 @@ export function renderTable(candidates, options = {}) {
         <td>${formatDisplay(c.IsTalentPoolDetail)}</td>
         <td>${formatDisplay(c.AccountPortal)}</td>
         <td>${formatDisplay(c.TagInfos)}</td>
-        <td>${formatDisplay(c.CandidateStatusID)}</td>
-        <td>${formatDisplay(c.Gender)}</td>
-        <td>${formatDisplay(c.Birthday)}</td>
+        <td>${RecruitmentStatusLabels[c.CandidateStatusID] || '--'}</td>
+        <td>${GenderLabels[c.Gender] || '--'}</td>
+        <td>${formatDate(c.Birthday)}</td>
         <td>${formatDisplay(c.Address)}</td>
         <td>${formatDisplay(c.ReasonRemoved)}</td>
         <td>${formatDisplay(c.CollaboratorName)}</td>
-        <td>${formatDisplay(c.HireDate)}</td>
-        <td>${formatDisplay(c.OfferStatus)}</td>
+        <td>${formatDate(c.HireDate)}</td>
+        <td>${OfferStatusLabels[c.OfferStatus] || '--'}</td>
         <td class="row-edit-btn">
           <div class="icon icon-edit pointer"></div>
         </td>
